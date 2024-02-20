@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "YU6n1y/5ZxQZikP5chjReCMhn8gDJtNelvHi+XnD8//eT63YrtDo/8z6SNndNmovbmmzKFNw7AxuokH8QRuqSA==",
+  "success": true,
+  "projectFilePath": "D:\\repo\\SMU\\Lab2\\ConsoleMenu.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sanliu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\sanliu\\.nuget\\packages\\yamldotnet\\15.1.1\\yamldotnet.15.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

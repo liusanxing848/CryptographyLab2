@@ -1,0 +1,23 @@
+system:
+  input: "input/"
+  output: "output/"
+network:
+  teamA:
+    ip: "35.86.141.142"
+    port: "9090"
+    encode: "encode?text="
+    decode: "decode?text="
+    schema: "encodedCiphertext"
+  teamB:
+    ip: "52.27.97.130"
+    port: "12345"
+    encode: "encode?text="
+    decode: "decode?text="
+    schema: "ciphertext"
+  teamC:
+    ip: "35.85.218.48"
+    port: "12345"
+    encode: "encode?text="
+    decode: "decode?text="
+    schema: "ciphertext"
+ 
