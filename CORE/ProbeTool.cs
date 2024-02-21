@@ -150,5 +150,35 @@ namespace ConsoleMenu.CORE
                 }
             }
         }
+
+        public static void ExtractReservedWord()
+        {
+            string inputFilePath = "locationReserveRaw_B.csv";
+            string outputFileName = "location_B.csv";
+            var dictionary = new Dictionary<string, Tuple<string, string>>();
+            var context = File.ReadAllLines(inputFilePath);
+            foreach (var line in context)
+            {
+                var parts = line.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+                var keys = parts[0].Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var values = parts[1].Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                var anticipated = parts[2].Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                for (int i = 0; i < keys.Length; i++)
+                {
+                    if (values[i] != anticipated[i])
+                    {
+                        App.ConsoleWriteRed($"Extract reserved word: {keys[i]} : {values[i]} / {anticipated[i]}");
+                    }
+                    //dictionary.Add(keys[i], Tuple.Create(values[i], anticipated[i]));
+                }        
+            }
+            //IO.DictionaryTupleToCSVFile("ouput", outputFileName, dictionary);
+
+            
+
+        }
     }
 }

@@ -110,9 +110,21 @@ namespace ConsoleMenu.UI.Util
             writer.Close();
         }
 
+        public static void DictionaryPairStringToCSVFile(string outputPathAndFileName, Dictionary<string, string> map)
+        {
+            StreamWriter writer = new StreamWriter(outputPathAndFileName, true);
+            foreach(KeyValuePair<string, string> kvp in map) 
+            {
+                StringBuilder sb = new StringBuilder(kvp.Key);
+                sb.Append($",{kvp.Value}");
+            }
+            writer.Close();
+        }
+        
+
         public static List<string> ReadDictionaryTestFile()
         {
-            string filePath = "input/adj,v,adv.txt";
+            string filePath = "input/cities.txt";
             return File.ReadAllLines(filePath).ToList();
         }
     }

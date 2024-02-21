@@ -22,6 +22,7 @@ namespace ConsoleMenu.UI
             "Run Dictionay for Team C", //8
             "Test Team B code book", //9
             "Test Team C code book", //10
+            "Extract Reserved word", //11
             "Exit"
         };
 
@@ -70,6 +71,10 @@ namespace ConsoleMenu.UI
                 case 10:
                     Console.Clear();
                     Run();
+                    break;
+                case 11:
+                    Console.Clear();
+                    _ExtractReservedWords();
                     break;
                 default:
                     break;
@@ -145,11 +150,14 @@ namespace ConsoleMenu.UI
                                            SystemConfig.NetworkConfig.TEAM_B.PORT,
                                            SystemConfig.NetworkConfig.TEAM_B.SCHEMA,
                                            SystemConfig.NetworkConfig.TEAM_B.ENCODE,
-                                           "nouns91K_B.csv",
-                                           "ReservedWordResultnouns91K_B.csv");
+                                           "cities_B.csv",
+                                           "ReservedWordResultcities_B.csv");
         }
 
-
+        private static void _ExtractReservedWords()
+        {
+            ProbeTool.ExtractReservedWord();
+        }
 
 
 

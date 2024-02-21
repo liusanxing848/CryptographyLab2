@@ -39,6 +39,8 @@ namespace ConsoleMenu.CORE
             map.Add('x', 'i');
             map.Add('y', 'j');
             map.Add('z', 'k');
+
+            map.Add(' ', ' ');
         }
 
         public static string Encode(string input)

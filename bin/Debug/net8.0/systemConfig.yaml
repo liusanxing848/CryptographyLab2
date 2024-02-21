@@ -9,7 +9,7 @@ network:
     decode: "decode?text="
     schema: "encodedCiphertext"
   teamB:
-    ip: "52.27.97.130"
+    ip: "52.34.29.27"
     port: "12345"
     encode: "encode?text="
     decode: "decode?text="
